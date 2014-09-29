@@ -7,28 +7,32 @@
     <meta name="description" content="Archercraftstore.github.io : Site">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <meta name="google-signin-clientid" content=" 601913270428-chnb7b11mmt5b5o7ppt6rvr0103r9hb6.apps.googleusercontent.com" />
-    <meta name="google-signin-cookiepolicy" content="https://archercraftstore.github.io" />
-    <meta name="google-signin-callback" content="signinCallback" />
-    <meta name="google-signin-requestvisibleactions" content="https://schema.org/AddAction" />
-    <meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login" />
-    <title>Archercraftstore.github.io</title>
-    <script type="text/javascript">
-      function signinCallback(authResult) {
-  if (authResult['status']['signed_in']) {
-    // Update the app to reflect a signed in user
-    // Hide the sign-in button now that the user is authorized, for example:
-    document.getElementById('signinButton').setAttribute('style', 'display: none');
-  } else {
-    // Update the app to reflect a signed out user
-    // Possible error values:
-    //   "user_signed_out" - User is signed-out
-    //   "access_denied" - User denied access to your app
-    //   "immediate_failed" - Could not automatically log in the user
-    console.log('Sign-in state: ' + authResult['error']);
-  }
+   <meta name="google-signin-clientid" content="CLIENT_ID" />
+<meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login" />
+<meta name="google-signin-requestvisibleactions" content="http://schema.org/AddAction" />
+<meta name="google-signin-cookiepolicy" content="single_host_origin" />
+<meta name="google-signin-callback" content="signinCallback" />
+<title>ArcherCraft Software Foundation</title>
+<script type="text/javascript">
+(function() {
+  var po = document.createElement('script');
+  po.type = 'text/javascript'; po.async = true;
+  po.src = 'https://apis.google.com/js/client:plusone.js?onload=render';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(po, s);
+})();
+
+/* Executed when the APIs finish loading */
+function render() {
+
+  // Additional params
+  var additionalParams = {
+    'theme' : 'dark'
+  };
+
+  gapi.signin.render('myButton', additionalParams);
 }
-    </script>
+</script>
   </head>
 
   <body>
